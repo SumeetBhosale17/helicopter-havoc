@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1730899891 source:c:\users\sumee\onedrive\desktop\game\main.cpp
+	"Engine.h"
+
+1730947512 c:\users\sumee\onedrive\desktop\game\src\core\engine.h
+	"SDL.h"
+	"SDL_image.h"
+
+1730950138 source:c:\users\sumee\onedrive\desktop\game\src\core\engine.cpp
+	"Engine.h"
+	"TextureManager.h"
+	<iostream>
+	<Vector2D.h>
+	<Transform.h>
+
+1730948100 c:\users\sumee\onedrive\desktop\game\src\graphics\texturemanager.h
+	<string>
+	<map>
+	"SDL.h"
+
+1730903423 source:c:\users\sumee\onedrive\desktop\game\src\graphics\texturemanager.cpp
+	"TextureManager.h"
+	"Engine.h"
+
+1730948105 source:c:\users\sumee\onedrive\desktop\game\src\physics\vector2d.cpp
+	"Vector2D.h"
+
+1730949512 c:\users\sumee\onedrive\desktop\game\src\physics\vector2d.h
+	<iostream>
+
+1730950042 c:\users\sumee\onedrive\desktop\game\src\physics\transform.h
+	<string>
+	"Vector2D.h"
+
