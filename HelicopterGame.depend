@@ -1,0 +1,117 @@
+# depslib dependency file v1.0
+1732342502 source:c:\users\sumee\onedrive\desktop\gametest\main.cpp
+	"GameLoop.h"
+	<ctime>
+
+1732343568 source:c:\users\sumee\onedrive\desktop\gametest\src\source\object.cpp
+	"Object.h"
+
+1732343558 c:\users\sumee\onedrive\desktop\gametest\src\headers\object.h
+	"TextureManager.h"
+
+1732336179 c:\users\sumee\onedrive\desktop\gametest\src\headers\texturemanager.h
+	<SDL.h>
+	<SDL_image.h>
+
+1732342635 source:c:\users\sumee\onedrive\desktop\gametest\src\source\texturemanager.cpp
+	"TextureManager.h"
+	<iostream>
+
+1732345582 c:\users\sumee\onedrive\desktop\gametest\src\headers\gameloop.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	"Player.h"
+	"Background.h"
+	"Obstacle.h"
+
+1732345821 c:\users\sumee\onedrive\desktop\gametest\src\headers\player.h
+	"Object.h"
+
+1732336301 c:\users\sumee\onedrive\desktop\gametest\src\headers\background.h
+	"Object.h"
+
+1732346673 source:c:\users\sumee\onedrive\desktop\gametest\src\source\gameloop.cpp
+	"GameLoop.h"
+	<cstdlib>
+	<ctime>
+	"Constants.h"
+	<SDL_ttf.h>
+
+1732342266 source:c:\users\sumee\onedrive\desktop\gametest\src\source\background.cpp
+	"Background.h"
+
+1732345873 source:c:\users\sumee\onedrive\desktop\gametest\src\source\player.cpp
+	"Player.h"
+	<iostream>
+
+1732345848 c:\users\sumee\onedrive\desktop\gametest\src\headers\obstacle.h
+	"Object.h"
+
+1732345913 source:c:\users\sumee\onedrive\desktop\gametest\src\source\obstacle.cpp
+	"Obstacle.h"
+	<cstdlib>
+	<ctime>
+	"Constants.h"
+	<iostream>
+
+1732342742 c:\users\sumee\onedrive\desktop\gametest\src\headers\constants.h
+
+1732342502 source:d:\game projects\helicopter-havoc\main.cpp
+	"GameLoop.h"
+	<ctime>
+
+1732345582 d:\game projects\helicopter-havoc\src\headers\gameloop.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	"Player.h"
+	"Background.h"
+	"Obstacle.h"
+
+1732345821 d:\game projects\helicopter-havoc\src\headers\player.h
+	"Object.h"
+
+1732343558 d:\game projects\helicopter-havoc\src\headers\object.h
+	"TextureManager.h"
+
+1732336179 d:\game projects\helicopter-havoc\src\headers\texturemanager.h
+	<SDL.h>
+	<SDL_image.h>
+
+1732336301 d:\game projects\helicopter-havoc\src\headers\background.h
+	"Object.h"
+
+1732345848 d:\game projects\helicopter-havoc\src\headers\obstacle.h
+	"Object.h"
+
+1732342266 source:d:\game projects\helicopter-havoc\src\source\background.cpp
+	"Background.h"
+
+1732346673 source:d:\game projects\helicopter-havoc\src\source\gameloop.cpp
+	"GameLoop.h"
+	<cstdlib>
+	<ctime>
+	"Constants.h"
+	<SDL_ttf.h>
+
+1732342742 d:\game projects\helicopter-havoc\src\headers\constants.h
+
+1732343568 source:d:\game projects\helicopter-havoc\src\source\object.cpp
+	"Object.h"
+
+1732345913 source:d:\game projects\helicopter-havoc\src\source\obstacle.cpp
+	"Obstacle.h"
+	<cstdlib>
+	<ctime>
+	"Constants.h"
+	<iostream>
+
+1732345873 source:d:\game projects\helicopter-havoc\src\source\player.cpp
+	"Player.h"
+	<iostream>
+
+1732342635 source:d:\game projects\helicopter-havoc\src\source\texturemanager.cpp
+	"TextureManager.h"
+	<iostream>
+

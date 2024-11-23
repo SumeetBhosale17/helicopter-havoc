@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Gametest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Gametest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="src/Headers" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Gametest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="src/Headers" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Headers/Background.h" />
+		<Unit filename="src/Headers/Constants.h" />
+		<Unit filename="src/Headers/GameLoop.h" />
+		<Unit filename="src/Headers/Object.h" />
+		<Unit filename="src/Headers/Obstacle.h" />
+		<Unit filename="src/Headers/Player.h" />
+		<Unit filename="src/Headers/TextureManager.h" />
+		<Unit filename="src/Source/Background.cpp" />
+		<Unit filename="src/Source/GameLoop.cpp" />
+		<Unit filename="src/Source/Object.cpp" />
+		<Unit filename="src/Source/Obstacle.cpp" />
+		<Unit filename="src/Source/Player.cpp" />
+		<Unit filename="src/Source/TextureManager.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

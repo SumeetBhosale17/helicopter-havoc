@@ -1,18 +1,20 @@
-#include "Engine.h"
-
-using namespace std;
+#include "GameLoop.h"
+#include <ctime>
 
 int main(int argc, char** argv)
 {
-    Engine::GetInstance()->Init();
+    srand(static_cast<unsigned int>(time(nullptr)));
+    GameLoop* g = new GameLoop();
 
-    while(Engine::GetInstance()->IsRunning())
+    g->Intialize();
+    while (g->getGameState())
     {
-        Engine::GetInstance()->Events();
-        Engine::GetInstance()->Update();
-        Engine::GetInstance()->Render();
+        g->Event();
+        g->Update();
+        g->Render();
+        SDL_Delay(16); // Delay to cap at ~60 FPS
     }
-
-    Engine::GetInstance()->Clean();
+    g->Clear();
+    delete g;
     return 0;
 }
