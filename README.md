@@ -20,7 +20,7 @@ Helicopter Havoc is an addictive 2D arcade game, inspired by Flappy Bird. Naviga
 First, clone the repository to your local machine:
 
 ```sh
-    git clone <repository-url>
+    git clone https://github.com/SumeetBhosale17/helicopter-havoc.git
     cd helicopter-havoc
 ```
 
