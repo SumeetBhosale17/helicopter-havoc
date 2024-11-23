@@ -1,25 +1,24 @@
 #include "GameLoop.h"
 #include <cstdlib>
 #include <ctime>
-#include "Constants.h" // Add this line
+#include "Constants.h" 
 #include <SDL_ttf.h>
 
 
 GameLoop::GameLoop()
-    : obstacle(WIDTH, HEIGHT), score(0), speed(1.0f) // Initialize speed
+    : obstacle(WIDTH, HEIGHT), score(0), speed(2.0f)
 {
     srand(static_cast<unsigned int>(time(nullptr)));
     window = NULL;
     renderer = NULL;
     GameState = false;
-    p.setSrc(0, 0, 53, 144); // Update dimensions to match heli.png
-    p.setDest(25, HEIGHT / 2, 53, 144); // Update dimensions to match heli.png
+    p.setSrc(0, 0, 53, 144);
+    p.setDest(25, HEIGHT / 2, 53, 144); 
     ground1.setSrc(0, 0, 112, 336);
     ground1.setDest(0, 420, 112, 336);
     ground2.setSrc(0, 0, 112, 336);
     ground2.setDest(336, 420, 112, 336);
 
-    // Ensure obstacle is initialized at the right edge
     obstacle.setDest(WIDTH, rand() % (HEIGHT - 320), 52, 320);
 }
 
@@ -28,7 +27,6 @@ bool GameLoop::getGameState()
     return GameState;
 }
 
-// src/Source/GameLoop.cpp
 
 void GameLoop::Intialize()
 {
@@ -53,10 +51,10 @@ void GameLoop::Intialize()
         if (renderer)
         {
             std::cout << "Renderer created successfully!" << std::endl;
-            GameState = true; // Ensure GameState is set to true here
-            p.CreateTexture("Assets/Images/heli.png", renderer); // Update this line
-            p.CreateTexture1("Assets/Images/heli.png", renderer); // Update this line
-            p.CreateTexture2("Assets/Images/heli.png", renderer); // Update this line
+            GameState = true; 
+            p.CreateTexture("Assets/Images/heli.png", renderer); 
+            p.CreateTexture1("Assets/Images/heli.png", renderer); 
+            p.CreateTexture2("Assets/Images/heli.png", renderer); 
             b.CreateTexture("Assets/Images/background-day.png", renderer);
             ground1.CreateTexture("Assets/Images/base.png", renderer);
             ground2.CreateTexture("Assets/Images/base.png", renderer);
@@ -69,7 +67,6 @@ void GameLoop::Intialize()
                 std::cout << "Failed to load Game Over texture." << std::endl;
             }
 
-            // Check if Obstacle Texture Loaded Successfully
             if (obstacle.getTexture() == nullptr)
             {
                 std::cout << "Failed to load Obstacle texture." << std::endl;
@@ -111,13 +108,13 @@ void GameLoop::Event()
             }
             else
             {
-                p.Gravity(speed); // Pass speed
+                p.Gravity(speed); 
             }
         }
     }
     else
     {
-        p.Gravity(speed); // Pass speed
+        p.Gravity(speed);
     }
     std::cout << "GameState after event handling: " << GameState << std::endl;
 }
@@ -126,30 +123,26 @@ void GameLoop::Update()
 {
     ground1.GroundUpdate1();
     ground2.GroundUpdate2();
-    obstacle.Update(WIDTH, HEIGHT, speed); // Pass dimensions and speed
+    obstacle.Update(WIDTH, HEIGHT, speed); 
 
-    // Collision detection between player and obstacle
     SDL_Rect playerRect = p.getDest();
     SDL_Rect obstacleRect = obstacle.getDest();
     if (SDL_HasIntersection(&playerRect, &obstacleRect))
     {
-        GameState = false; // End the game on collision
+        GameState = false; 
     }
 
-    // Check if the bird is out of the screen bounds
     if (p.getDest().y + p.getDest().h > HEIGHT || p.getDest().y < 0)
     {
         GameState = false;
     }
 
-    // Update score and speed
     if (GameState)
     {
         score++;
-        speed += 0.001f; // Gradually increase the speed
+        speed += 0.005f; 
     }
 
-    // Debug: Print Positions
     std::cout << "Player Position: (" << p.getDest().x << ", " << p.getDest().y << ")" << std::endl;
     std::cout << "Obstacle Position: (" << obstacle.getDest().x << ", " << obstacle.getDest().y << ")" << std::endl;
     std::cout << "GameState after update: " << GameState << std::endl;
@@ -158,15 +151,14 @@ void GameLoop::Update()
 void GameLoop::Render()
 {
     SDL_RenderClear(renderer);
-    b.Render(renderer); // Background
-    ground1.GroundRender(renderer); // Ground 1
-    ground2.GroundRender(renderer); // Ground 2
-    obstacle.Render(renderer); // Obstacle
-    p.Render(renderer); // Player
+    b.Render(renderer); 
+    ground1.GroundRender(renderer); 
+    ground2.GroundRender(renderer);
+    obstacle.Render(renderer);
+    p.Render(renderer);
 
-    // Render Score
-    SDL_Color textColor = {255, 255, 255, 255}; // White color
-    TTF_Font* font = TTF_OpenFont("Assets/Fonts/arial.ttf", 28); // Ensure the font file exists
+    SDL_Color textColor = {255, 255, 255, 255}; 
+    TTF_Font* font = TTF_OpenFont("Assets/Fonts/arial.ttf", 28); 
     if (font)
     {
         std::string scoreText = "Score: " + std::to_string(score);
@@ -187,10 +179,9 @@ void GameLoop::Render()
 
     if (!GameState)
     {
-        // Display Game Over Image
         if (gameOverTexture)
         {
-            SDL_Rect textRect = {WIDTH / 2 - 200, HEIGHT / 2 - 50, 400, 100}; // Adjust size and position as needed
+            SDL_Rect textRect = {WIDTH / 2 - 200, HEIGHT / 2 - 50, 400, 100};
             SDL_RenderCopy(renderer, gameOverTexture, NULL, &textRect);
         }
     }

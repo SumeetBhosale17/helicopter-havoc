@@ -24,9 +24,9 @@ void Player::Render(SDL_Renderer* ren)
     }
 }
 
-void Player::Gravity(float speed) // Ensure this matches the header
+void Player::Gravity(float speed)
 {
-    if (JumpState())
+     if (JumpState())
     {
         accelerator1 += 0.035 * speed;
         accelerator2 += 0.035 * speed;
@@ -59,7 +59,7 @@ void Player::Jump()
     }
     else
     {
-        Gravity(1.0f); // Default speed if called without speed parameter
+        Gravity(1.0f);
     }
 }
 

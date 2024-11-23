@@ -61,7 +61,7 @@
 	"GameLoop.h"
 	<ctime>
 
-1732345582 d:\game projects\helicopter-havoc\src\headers\gameloop.h
+1732361580 d:\game projects\helicopter-havoc\src\headers\gameloop.h
 	<SDL.h>
 	<SDL_image.h>
 	<iostream>
@@ -75,7 +75,7 @@
 1732343558 d:\game projects\helicopter-havoc\src\headers\object.h
 	"TextureManager.h"
 
-1732336179 d:\game projects\helicopter-havoc\src\headers\texturemanager.h
+1732361591 d:\game projects\helicopter-havoc\src\headers\texturemanager.h
 	<SDL.h>
 	<SDL_image.h>
 
@@ -88,7 +88,7 @@
 1732342266 source:d:\game projects\helicopter-havoc\src\source\background.cpp
 	"Background.h"
 
-1732346673 source:d:\game projects\helicopter-havoc\src\source\gameloop.cpp
+1732361444 source:d:\game projects\helicopter-havoc\src\source\gameloop.cpp
 	"GameLoop.h"
 	<cstdlib>
 	<ctime>
@@ -100,7 +100,7 @@
 1732343568 source:d:\game projects\helicopter-havoc\src\source\object.cpp
 	"Object.h"
 
-1732345913 source:d:\game projects\helicopter-havoc\src\source\obstacle.cpp
+1732361532 source:d:\game projects\helicopter-havoc\src\source\obstacle.cpp
 	"Obstacle.h"
 	<cstdlib>
 	<ctime>
@@ -111,7 +111,7 @@
 	"Player.h"
 	<iostream>
 
-1732342635 source:d:\game projects\helicopter-havoc\src\source\texturemanager.cpp
+1732361557 source:d:\game projects\helicopter-havoc\src\source\texturemanager.cpp
 	"TextureManager.h"
 	<iostream>
 

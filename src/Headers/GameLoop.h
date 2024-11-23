@@ -13,15 +13,15 @@ private:
     Background b;
     Background ground1, ground2;
     Obstacle obstacle;
-    SDL_Texture* gameOverTexture; // Add this line
+    SDL_Texture* gameOverTexture; 
     const int HEIGHT = 600;
     const int WIDTH = 800;
     bool GameState;
     SDL_Window* window;
     SDL_Event event1;
     SDL_Renderer* renderer;
-    int score; // Add this line
-    float speed; // Add this line
+    int score;
+    float speed;
 public:
     GameLoop();
     bool getGameState();
